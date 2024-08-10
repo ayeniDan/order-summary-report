@@ -1,0 +1,153 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --vpale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --general-font: 'red hat display', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    font-size: 14px;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--general-font);
+    background-color: var(--pale-blue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 32px;
+}
+
+.container {
+    text-align: center;
+    max-width: 360px;
+    border-radius: 20px;
+    background-color: var(--vpale-blue);
+    overflow: hidden;
+}
+
+.img-cont {
+    width: 100%;
+}
+
+.summary-cont {
+    width: 100%;
+    padding: 36px;
+}
+
+.summary-cont h1 {
+    font-size: 24px;
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.summary-cont > p {
+    line-height: 26px;
+    color: var(--desaturated-blue);
+    margin: 12px 0 24px 0;
+}
+
+.price-cont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 24px 0;
+    padding: 20px;
+    border-radius: 14px;
+    background-color: var(--vpale-blue);
+}
+
+.price-cont a {
+    color: var(--bright-blue);
+    font-weight: 700;
+}
+
+.price-cont a:hover {
+    cursor: pointer;
+}
+
+.price-cont .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.price-cont .price img {
+    width: 40px;
+}
+
+.plan {
+    text-align: left;
+    color: var(--desaturated-blue);
+}
+
+.plan p {
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bright-blue);
+    color: var(--vpale-blue);
+    font-weight: 900;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+button:hover {
+    opacity: 60%;    
+    cursor: pointer;
+}
+
+button + a {
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    font-weight: 700;
+}
+
+button + a:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+@media only screen and (max-width: 450px) {
+    .summary-cont {
+        padding: 12px;
+    }
+
+    .summary-cont > p {
+        margin: 6px 0 12px 0;
+    }
+
+    .price-cont {
+        margin-bottom: 12px;
+    }
+
+    button {
+        margin-bottom: 12px;
+    }
+}
